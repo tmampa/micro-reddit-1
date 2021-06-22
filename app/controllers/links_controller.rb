@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: %i[show edit update destroy]
+  # before_action :set_link, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
 
   # GET /links or /links.json
@@ -8,7 +8,9 @@ class LinksController < ApplicationController
   end
 
   # GET /links/1 or /links/1.json
-  def show; end
+  def show
+    @link = Link.find(params[:id])
+  end
 
   # GET /links/new
   def new
