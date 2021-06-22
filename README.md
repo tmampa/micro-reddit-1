@@ -16,7 +16,7 @@
 ## Getting Started
 ### To get a local copy run the following steps:
 
-- [Copy this link](https://github.com/ZeenatLawal/Micro-Reddit)
+- [Copy this link](https://github.com/prolajumokeoni/micro-reddit)
 - Open your terminal or command line
 - Run `git clone` and Paste the link
 - Open the folder with your code editor
