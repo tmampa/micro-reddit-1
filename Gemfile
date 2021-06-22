@@ -7,6 +7,11 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'simple_form'
+
+# so that we can use the 'div_for' method
+gem 'record_tag_helper', '~> 1.0'
+
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
