@@ -13,6 +13,18 @@
 - HTML
 - CSS/Bootstrap
 
+## Getting Started
+### To get a local copy run the following steps:
+
+- [Copy this link](https://github.com/ZeenatLawal/Micro-Reddit)
+- Open your terminal or command line
+- Run `git clone` and Paste the link
+- Open the folder with your code editor
+- Run `bundle install` to install all dependecies
+- Run `rails db:migrate` to create the database tables
+- Run `rails console` to test the project
+
+## Authors
 
 👤 **Tshephang Mampa**
 
