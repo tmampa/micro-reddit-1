@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :links
   has_many :comments
 
-  validates :name, presence: true, length: { in: 3..16 }
+  validates :email, presence: true
 end

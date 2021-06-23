@@ -18,7 +18,9 @@ class LinksController < ApplicationController
   end
 
   # GET /links/1/edit
-  def edit; end
+  def edit
+    @link = Link.find(params[:id])
+  end
 
   # POST /links or /links.json
   def create
@@ -36,24 +38,22 @@ class LinksController < ApplicationController
 
   # PATCH/PUT /links/1 or /links/1.json
   def update
-    respond_to do |format|
-      if @link.update(link_params)
-        format.html { redirect_to @link, notice: 'Link was successfully updated.' }
-        format.json { render :show, status: :ok, location: @link }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
-      end
+    @link = Link.find(params[:id])
+
+    if @link.update(link_params)
+      redirect_to @link
+    else
+      render :edit
     end
   end
 
   # DELETE /links/1 or /links/1.json
+
   def destroy
+    @link = Link.find(params[:id])
     @link.destroy
-    respond_to do |format|
-      format.html { redirect_to links_url, notice: 'Link was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
+    redirect_to root_path
   end
 
   private
